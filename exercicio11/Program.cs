@@ -108,3 +108,16 @@ class Program
         } 
     }
 }
+
+/*
+ Este código é muito parecido com o da questão de número 9, o que me fez reutilizar boa parte do código.
+Se inicia gerando um caminho para o txt e a mesma variável de execução do menu. 
+É criado o método adcionar contato que requisita nome, telefone e email, as sequencia escrevendo no arquivo como requisitado.
+O processo da escrita é feito dentro de um try, para capturar possíveis erros.
+É criado o método de listar contato, utilizando o mesmo processo de listagem de produtos da questão 9.
+Esse método inicialmente armazena todas as linhas num array e verifica se há telefones cadastrados para prosseguir o processo.
+Caso tenha, ele separa por vírgula a string de linha, que vai separar na posição 0,1 e 2, respectivamente, nome, telefone e email.
+Se houver erro, ele exibe no terminal. É criado então um menu while condicionado pela variável criada no início do código.
+Ele exibe as opções com um número, sendo cada número atribuído a um case no switch.
+A opção 3 encerra o menu while através da alteração de sua condicional. Caso seja digitado algo além das opções, ele exibe o erro.
+ */

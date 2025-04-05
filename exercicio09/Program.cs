@@ -160,3 +160,23 @@ class Program
 
 
 }
+
+/*
+ O código começa atribuindo o path de arquivo a uma variável constante, pois esse caminho não será alterado ao longo do código.
+Em seguida, são inicializadas as variáveis de execução do menu e contador para quantidade de produtos inseridos.
+É criado o método inserir produto, que inicializa nome, quantidade e preço do produto, em seguida requisitando os mesmos.
+Quantidade de estoque e preço são requisitados com while e possuem tratamento de erro caso o tipo de dado inserido pelo usuário não seja o dado exigido,
+e pede até que ele insira o tipo correto. É inserido então no arquivo o produto, com seus dados arranjados como requisitado.
+Foi utilizado o método nativo “System.Globalization.CultureInfo.InvariantCulture” para transformar a vírgula em ponto.
+Esse método não era de meu conhecimento, e fui atrás dele na internet para saber como fazia essa alteração. 
+Ele foi necessário pois, salvando o double com virgula o meu split sempre dava mais de 3 posições, assim gerando erro no fluxo do código.
+O segundo método é o de listar produtos, que inicialmente armazena todas as linhas num array e verifica se há produtos
+cadastrados para prosseguir o processo. Caso tenha, ele separa por vírgula a string da linha, que vai separar na posição 0,1 e 2,
+respectivamente, nome, quantidade e preço. A variável de preço utiliza o método nativo para transformar ponto em vírgula,
+para não quebrar o fluxo do código. Se houver erro, ele exibe no terminal.
+É criado então um menu while condicionado pela variável criada no início do código.
+Ele exibe as opções com um número, sendo cada número atribuído a um case no switch.
+A opção de inserir produto traz consigo um if simples que verifica se o contador de inserção de produtos já chegou no seu limite.
+Se tiver chegado, ele exibe a mensagem de que o limitide de cadastro de produtos foi alcançado.
+A opção 3 encerra o menu while através da alteração de sua condicional. Caso seja digitado algo além das opções, ele exibe o erro.
+ */

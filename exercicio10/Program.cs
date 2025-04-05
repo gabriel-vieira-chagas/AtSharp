@@ -70,3 +70,24 @@ class Program
         }
     }
 }
+
+/*
+ O código começa declarando e inicializando uma série de variáveis que serão utilizadas no decorrer do código.
+Primeiro é declarada a variável random para instanciar a classe nativa Random do System.
+Em seguida é gerado e armazenado um número aleatório no intervalo de 1 a 51, sendo 1 incluso e e 51 excluso.
+Dessa forma, o intervalo de números é, na prática, de 1 a 50. O palpite da adivinhação é inicializado como inteiro,
+de mesmo modo que a variável de chances. As condições de acerto e chance são inicializadas como false, para serem utilizadas no while futuro.
+O tratamento de entrada também é inicializado como false e será importante para aceitar ou não a entrada do usuário.
+O código exibe o número para poder facilitar a depuração e a exemplificação.
+É exibida uma mensagem de título e criado um while onde está inserido a maior parte do código.
+Este while é interrompido caso o usuário tenha chegado na quinta chance e errado nela também,
+assim não permitindo ter mais chances como requisitado, ou no caso do usuário ter acertado o número.
+É criado um while então para verificar se a entrada do usuário é um número inteiro no intervalo de 1 a 50.
+Qualquer coisa além disso mantém a condição de entrada como false, e segue requisitando uma entrada válida sem gastar as chances do usuário.
+Caso ele tenha colocado um número válido, é atribuído true para o tratamento, e ele passa para o próximo if do código,
+que apenas exibe se o palpite foi menor ou maior do que o número secreto. Em seguida é verificado se as chances acabaram,
+ou se o número foi acertado com dois ifs simples. No fim do while a chance recebe um acréscimo e o tratamento é atribuído novamente para false,
+para que o processo possa ser reiniciado, já que sem ele ali somente o primeiro número é gravado, travando o while.
+Por fim, se a condição de acerto for verdadeira, é exibida a mensagem de acerto.
+Do contrário, é exibida a mensagem dizendo que o usuário não acertou e revelando o número.
+ */
